@@ -16,17 +16,22 @@ import (
 )
 
 const (
+  // stats not supported post merge
 	j               = "application/json"
 	flashbotURL     = "https://api.securerpc.com/v1"
 	stats           = "flashbots_getUserStats"
-	sb		        = "manifold_sendBundle"
+	sb		          = "manifold_sendBundle"
 	flashbotXHeader = "X-Flashbots-Signature"
 	p               = "POST"
 )
 
+// pubAddr: 0x45Bdc5051bBf3319DA289BA222E1c5F99136Ed43
+// https://github.com/flashbots/rpc-endpoint/commit/d42ae0b665833391398628358ca03dae1964868d#diff-311b8f116ec381569dfecd92d10675b9ff9acffcbc86d66ca4bc0aca79b6e991L35
+// Flashbots RPC Relay Test Key
 var (
 	privateKey, _ = crypto.HexToECDSA(
-		"2e19800fcbbf0abb7cf6d72ee7171f08943bc8e5c3568d1d7420e52136898154",
+    "7bdeed70a07d5a45546e83a88dd430f71348592e747d2d3eb23f32db003eb0e1",
+//		"2e19800fcbbf0abb7cf6d72ee7171f08943bc8e5c3568d1d7420e52136898154",
 	)
 )
 
